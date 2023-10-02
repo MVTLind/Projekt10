@@ -12,7 +12,7 @@ public class Main {
 
 			SelectDiscipline selectDiscipline = new SelectDiscipline();
 			selectDiscipline.inputSelection();
-
+//Test 14:05
 		}
 		choice = false;
 	}
