@@ -12,7 +12,7 @@ public class Main {
 
 			SelectDiscipline selectDiscipline = new SelectDiscipline();
 			selectDiscipline.inputSelection();
-			//TEST
+			//TESTerik
 		}
 		choice = false;
 	}
