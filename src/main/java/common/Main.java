@@ -12,7 +12,7 @@ public class Main {
 
 			SelectDiscipline selectDiscipline = new SelectDiscipline();
 			selectDiscipline.inputSelection();
-			//Erik Test 14:00
+
 		}
 		choice = false;
 	}
