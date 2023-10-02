@@ -14,6 +14,6 @@ public class Main {
 			selectDiscipline.inputSelection();
 		}
 		choice = false;
-		// testing again
+		// testing again.
 	}
 }
