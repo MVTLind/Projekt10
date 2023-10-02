@@ -23,7 +23,7 @@ public class Hep800M {
 					System.out.println("Value too low");
 					runningTime = inputResult.enterResult();
 				} else if (runningTime > 250.79) {
-					// competitor gets 1 point in 250.79 sec
+					// competitor gets 1 point in 250.79 sec //Consistency? Not the same as Deca400M
 					System.out.println("Value too high");
 					runningTime = inputResult.enterResult();
 				} else {

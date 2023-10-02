@@ -31,11 +31,11 @@ public class SelectDiscipline {
 	Deca110MHurdles deca110MHurdles = new Deca110MHurdles();
 	Deca1500M deca1500M = new Deca1500M();
 	DecaLongJump decaLongJump = new DecaLongJump();
-	DecaHighJump highJump = new DecaHighJump();
-	DecaDiscusThrow discusThrow = new DecaDiscusThrow();
+	DecaHighJump highJump = new DecaHighJump(); //name missing "deca", refactor?
+	DecaDiscusThrow discusThrow = new DecaDiscusThrow(); //name missing "deca", refactor?
 	DecaShotPut decaShotPut = new DecaShotPut();
 	DecaJavelinThrow decaJavelinThrow = new DecaJavelinThrow();
-	DecaPoleVault poleVault = new DecaPoleVault();
+	DecaPoleVault poleVault = new DecaPoleVault(); //name missing "deca", refactor?
 
 	Hep200M hep200M = new Hep200M();
 	Hep800M hep800M = new Hep800M();

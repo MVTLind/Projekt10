@@ -15,7 +15,8 @@ public class InputResult {
 				inputResult = Double.parseDouble(sc.nextLine());
 				active = false;
 			} catch (Exception e) {
-				System.out.println("Invalid input, try again.");
+				System.out.println("Invalid input, try again."); //Vague error message
+
 				
 			}
 
