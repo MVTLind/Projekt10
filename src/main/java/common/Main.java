@@ -13,6 +13,7 @@ public class Main {
 			SelectDiscipline selectDiscipline = new SelectDiscipline();
 			selectDiscipline.inputSelection();
 		}
+		// Testing Erik 14:52
 		choice = false;
 	}
 }
