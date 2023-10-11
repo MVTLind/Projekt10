@@ -23,9 +23,9 @@ public class Hep100MHurdles {
 				if (runningTime < 5) {
 					System.out.println("Value too low");
 					runningTime = inputResult.enterResult();
-				} else if (runningTime > 26.4) {
+				} else if (runningTime > 50) {
 					System.out.println("Value too high");
-					//runningTime = inputResult.enterResult(); //Is not supposed to be commented?
+					//runningTime = inputResult.enterResult();
 				} else {
 
 					score = calc.calculateTrack(A, B, C, runningTime);
