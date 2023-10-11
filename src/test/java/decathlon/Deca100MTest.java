@@ -2,7 +2,6 @@ package decathlon;
 
 import common.CalcTrackAndField;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class Deca100MTest {
