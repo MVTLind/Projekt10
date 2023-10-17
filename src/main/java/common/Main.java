@@ -6,15 +6,16 @@ public class Main {
 
 	public static void main(String[] args) {
 		boolean choice = true;
+		InputName inputName = new InputName();
+		inputName.addCompetitor();
+
 		while (choice = true) {
-			InputName inputName = new InputName();
-			inputName.addCompetitor();
+
 
 			SelectDiscipline selectDiscipline = new SelectDiscipline();
-			selectDiscipline.inputSelection();
+			selectDiscipline.inputSelection(inputName);
 		}
 		choice = false;
-		// testing again.
-		// Test Onsdag
+
 	}
 }

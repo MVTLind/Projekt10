@@ -1,5 +1,6 @@
 package common;
 
+import common.InputName;
 import java.util.Scanner;
 
 import decathlon.Deca100M;
@@ -31,11 +32,11 @@ public class SelectDiscipline {
 	Deca110MHurdles deca110MHurdles = new Deca110MHurdles();
 	Deca1500M deca1500M = new Deca1500M();
 	DecaLongJump decaLongJump = new DecaLongJump();
-	DecaHighJump highJump = new DecaHighJump();
-	DecaDiscusThrow discusThrow = new DecaDiscusThrow();
+	DecaHighJump decaHighJump = new DecaHighJump();
+	DecaDiscusThrow decaDiscusThrow = new DecaDiscusThrow();
 	DecaShotPut decaShotPut = new DecaShotPut();
 	DecaJavelinThrow decaJavelinThrow = new DecaJavelinThrow();
-	DecaPoleVault poleVault = new DecaPoleVault();
+	DecaPoleVault decaPoleVault = new DecaPoleVault();
 
 	Hep200M hep200M = new Hep200M();
 	Hep800M hep800M = new Hep800M();
@@ -44,28 +45,31 @@ public class SelectDiscipline {
 	HeptLongJump hepLongJump = new HeptLongJump();
 	HeptShotPut hepShotPut = new HeptShotPut();
 	HeptJavelinThrow hepJavelinThrow = new HeptJavelinThrow();
-	
+
 	//Receive input	of selection of discipline.
 
-	public void inputSelection() {
+	public void inputSelection(InputName name) {
 		System.out.println("Select discipline.");
 		printDisciplines();
 
 		try {
 
 			disciplineSelected = Integer.parseInt(sc.nextLine());
-			makeSelection();
+			makeSelection(name);
 
 		} catch (Exception e) {
-			System.out.println("Invalid input, try again.");
+			System.out.println("Invalid input, try again---.");
 			System.out.println("");
-			inputSelection();
+			printDisciplines();
 		}
 
 	}
 
 	// Check input of discipline.
-	public void makeSelection() {
+	public void makeSelection(InputName name) {
+
+		Integer partialScore = 0;
+
 		switch (disciplineSelected) {
 		case 1:
 			deca100M.calculateResult(inputResult.enterResult());
@@ -79,17 +83,17 @@ public class SelectDiscipline {
 		case 4:
 			deca1500M.calculateResult(inputResult.enterResult());
 			break;
-		case 5:			
+		case 5:
 			decaLongJump.calculateResult(inputResult.enterResult());
 			break;
 		case 6:
-			highJump.calculateResult(inputResult.enterResult());
+			decaHighJump.calculateResult(inputResult.enterResult());
 			break;
 		case 7:
-			poleVault.calculateResult(inputResult.enterResult());
+			decaPoleVault.calculateResult(inputResult.enterResult());
 			break;
 		case 8:
-			discusThrow.calculateResult(inputResult.enterResult());
+			decaDiscusThrow.calculateResult(inputResult.enterResult());
 			break;
 		case 9:
 			decaJavelinThrow.calculateResult(inputResult.enterResult());
@@ -116,12 +120,17 @@ public class SelectDiscipline {
 			hepShotPut.calculateResult(inputResult.enterResult());
 			break;
 		case 17:
-			hepJavelinThrow.calculateResult(inputResult.enterResult());
+			partialScore = hepJavelinThrow.calculateResult(inputResult.enterResult());
+			name.score = partialScore + name.score;
 			break;
+		case 18:
+			System.out.println(name.score);
+			break;
+
 		default:
-			System.out.println("Invalid input, try again.");
+			System.out.println("Invalid input, try again:::.");
 			System.out.println("");
-			inputSelection();
+			inputSelection(name);
 			break;
 		}
 	}
@@ -138,13 +147,13 @@ public class SelectDiscipline {
 		System.out.println("8. Decathlon Discus Throw. (Measured in meters)");
 		System.out.println("9. Decathlon Javelin Throw. (Measured in meters)");
 		System.out.println("10. Decathlon Shot Put. (Measured in meters)");
-		System.out.println("11. Heptathlon 200 meters.");
-		System.out.println("12. Heptathlon 800 meters.");
-		System.out.println("13. Heptathlon 100 meters hurdles.");
-		System.out.println("14. Heptathlon High Jump.");
-		System.out.println("15. Heptathlon Long Jump.");
-		System.out.println("16. Heptathlon Shot Put.");
-		System.out.println("17. Heptathlon Javelin Throw.");
+		System.out.println("11. Heptathlon 200 meters. (Measured in seconds)");
+		System.out.println("12. Heptathlon 800 meters. (Measured in minutes and seconds)");
+		System.out.println("13. Heptathlon 100 meters hurdles. (Measured in seconds)");
+		System.out.println("14. Heptathlon High Jump. (Measured in centimeters)");
+		System.out.println("15. Heptathlon Long Jump. (Measured in centimeters)");
+		System.out.println("16. Heptathlon Shot Put. (Measured in meters)");
+		System.out.println("17. Heptathlon Javelin Throw. (Measured in meters)");
 	}
 
 }
