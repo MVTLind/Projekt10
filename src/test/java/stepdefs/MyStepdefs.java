@@ -11,11 +11,17 @@ public class MyStepdefs {
     private double B;
     private double C;
     private double score;
+    private String TrackOrField;
     CalcTrackAndField calc = new CalcTrackAndField();
 
-    @And("I enter {double} as my result")
-    public void iEnterNumberAsMyResult(double result) {
-        score = calc.calculateTrack(A, B, C, result);
+    @And("I enter {string} {double} as my result")
+    public void iEnterNumberAsMyResult(String TrackOrField, double result) {
+        if (TrackOrField.equals("Field")) {
+            score = calc.calculateField(A, B, C, result);
+        }
+        else if (TrackOrField.equals("Track")) {
+            score = calc.calculateTrack(A, B, C, result);
+        }
     }
 
     @Then("I can verify my score as {double}")
@@ -96,6 +102,56 @@ public class MyStepdefs {
                 C = 1.05;
                 break;
             }
+
+            case "Hep100MHurdles": {
+                A = 9.23076;
+                B = 26.7;
+                C = 1.835;
+                break;
+            }
+
+            case "Hep200M": {
+                A = 4.99087;
+                B = 42.5;
+                C = 1.81;
+                break;
+            }
+
+            case "Hep800M": {
+                A = 0.11193;
+                B = 254;
+                C = 1.88;
+                break;
+            }
+
+            case "HeptHightJump": {
+                A = 1.84523;
+                B = 75;
+                C = 1.348;
+                break;
+            }
+
+            case "HeptJavelinThrow": {
+                A = 15.9803;
+                B = 3.8;
+                C = 1.04;
+                break;
+            }
+
+            case "HeptLongJump": {
+                A = 0.188807;
+                B = 210;
+                C = 1.41;
+                break;
+            }
+
+            case "HeptShotPut": {
+                A = 56.0211;
+                B = 1.5;
+                C = 1.05;
+                break;
+            }
         }
     }
+
 }
