@@ -37,7 +37,7 @@ public class SelectDiscipline {
 	DecaShotPut decaShotPut = new DecaShotPut();
 	DecaJavelinThrow decaJavelinThrow = new DecaJavelinThrow();
 	DecaPoleVault decaPoleVault = new DecaPoleVault();
-
+  
 	Hep200M hep200M = new Hep200M();
 	Hep800M hep800M = new Hep800M();
 	Hep100MHurdles hep100MHurdles = new Hep100MHurdles();

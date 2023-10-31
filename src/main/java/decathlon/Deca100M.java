@@ -26,7 +26,6 @@ public class Deca100M {
 					System.out.println("Value too high");
 					runningTime = inputResult.enterResult();
 				} else {
-
 					score = calc.calculateTrack(A, B, C, runningTime);
 					active = false;
 				}
