@@ -1,6 +1,5 @@
 package common;
 
-import common.InputName;
 import java.util.Scanner;
 
 import decathlon.Deca100M;

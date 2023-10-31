@@ -1,21 +1,17 @@
 package common;
 
-import decathlon.*;
-
 public class Main {
 
 	public static void main(String[] args) {
-		boolean choice = true;
-		InputName inputName = new InputName();
-		inputName.addCompetitor();
 
-		while (choice = true) {
+		boolean running = true;
 
-
-			SelectDiscipline selectDiscipline = new SelectDiscipline();
-			selectDiscipline.inputSelection(inputName);
+		while (running){
+			Menu menu = new Menu();
+			menu.inputSelection();
+			running = menu.running;
 		}
-		choice = false;
+
 
 	}
 }
