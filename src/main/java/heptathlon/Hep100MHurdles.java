@@ -25,12 +25,12 @@ public class Hep100MHurdles {
 					runningTime = inputResult.enterResult();
 				} 
         
-        else if (runningTime > 35) {
+        			else if (runningTime > 35) {
 					System.out.println("Value too high");
 					runningTime = inputResult.enterResult();
 				} 
         
-        else {
+        			else {
 
 					score = calc.calculateTrack(A, B, C, runningTime);
 					active = false;
