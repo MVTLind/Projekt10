@@ -40,18 +40,7 @@ public class Menu {
             case 1:
                 InputName inputName = new InputName();
                 inputName.addCompetitor();
-                //competitorName = inputName.addCompetitor();
-                //System.out.println(competitorName);
-
-                //Competitor name = new Competitor(competitorName);
-                //Competitor Johan = new Competitor("Johan");
-
-                SelectDiscipline selectDiscipline = new SelectDiscipline();
                 selectDiscipline.inputSelection(inputName);
-                //setScore();
-
-                //Competitor score = new Competitor(competitorName);
-
                 break;
             case 2:
                 break;
@@ -60,12 +49,15 @@ public class Menu {
             case 4:
                 break;
             case 5:
-//                try {
-//                    name.printInfo();
-//                } catch (Exception e) {
-//                    System.out.println("There is no competitor , try again.\n");
-//                    printOptions();
-//                }
+//                Print all existing competitors
+//                Ask user: which competitor do you want to see all scores in
+//                Print all scores for CHOSEN competitor with all branches
+                System.out.print("Here is all competitors:\n");
+                selectDiscipline.printAvailableUsers();
+                System.out.print("Please select competitor with Id number:\n");
+                int index = Integer.parseInt(sc.nextLine());
+                selectDiscipline.currentUser.printAllScores();
+
                 break;
             case 0:
                 System.out.println("Exiting...");

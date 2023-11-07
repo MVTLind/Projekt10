@@ -22,7 +22,8 @@ import heptathlon.HeptShotPut;
 
 public class SelectDiscipline {
 
-	public int deca100MScore;
+	int result = 0;
+	CompetitorDataBase DB = new CompetitorDataBase();
 	int disciplineSelected;
 	InputResult inputResult = new InputResult();
 	Scanner sc = new Scanner(System.in);
@@ -67,21 +68,16 @@ public class SelectDiscipline {
 	// Check input of discipline.
 	public void makeSelection(InputName name) {
 
-		Integer partialScore = 0;
 		Scanner scan = new Scanner(System.in);
-		CompetitorDataBase DB = new CompetitorDataBase();
 
 		switch (disciplineSelected) {
 		case 1:
-			Competitor currentUser = DB.getUser(0);
-			//currentUser = DB.getUser(index);
-			System.out.println(currentUser.getDeca100M());
-
+			//Competitor currentUser = DB.getUser(0);
 			deca100M.calculateResult(inputResult.enterResult());
-			int result = deca100M.returnResult();
-
-			currentUser.setDeca100M(result);
-			System.out.println(currentUser.getDeca100M());
+			result = deca100M.returnResult();
+			DB.getUser(0).printAllScores();
+			DB.getUser(0).setDeca100M(result);
+			DB.getUser(0).printAllScores();
 			break;
 		case 2:
 			deca400M.calculateResult(inputResult.enterResult());
@@ -129,8 +125,8 @@ public class SelectDiscipline {
 			hepShotPut.calculateResult(inputResult.enterResult());
 			break;
 		case 17:
-			partialScore = hepJavelinThrow.calculateResult(inputResult.enterResult());
-			name.score = partialScore + name.score;
+			//partialScore = hepJavelinThrow.calculateResult(inputResult.enterResult());
+			//name.score = partialScore + name.score;
 			break;
 		case 18:
 			System.out.println(name.score);
@@ -165,4 +161,16 @@ public class SelectDiscipline {
 		System.out.println("17. Heptathlon Javelin Throw. (Measured in meters)");
 	}
 
+	public void printAvailableUsers(){
+		DB.printAvailableUsers();
+	}
+
+	public Competitor getUser(int index){
+		return DB.getUser(index);
+	}
+
+	public void printAllScores(int index){
+		//DB.getUser(0).printAllScores();
+		DB.getUser(0).printAllScores();
+	}
 }

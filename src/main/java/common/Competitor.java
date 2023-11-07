@@ -200,9 +200,10 @@ public class Competitor {
         this.heptShotPut = heptShotPut;
     }
 
-    public void printInfo(){
-    System.out.println("Competitor name: " + getName());
-    System.out.println("Competitor total score: " + getScore());
+    public void printAllScores(){
+        System.out.println("Competitor name: " + getName());
+        System.out.println("Deca100M: " + getDeca100M());
+        System.out.println("Deca110MHurdles: " + getDeca110mHurdles());
     }
 
 }

@@ -24,6 +24,5 @@ public class CompetitorDataBase {
         for (Integer key : users.keySet()){
             System.out.println("Id:" + key + ", Name:" + users.get(key).getName());
         }
-        System.out.print("Please write an Id to choose that user:");
     }
 }
