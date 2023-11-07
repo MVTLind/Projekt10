@@ -31,11 +31,11 @@ public class SelectDiscipline {
 	Deca110MHurdles deca110MHurdles = new Deca110MHurdles();
 	Deca1500M deca1500M = new Deca1500M();
 	DecaLongJump decaLongJump = new DecaLongJump();
-	DecaHighJump highJump = new DecaHighJump();
-	DecaDiscusThrow discusThrow = new DecaDiscusThrow();
+	DecaHighJump decahighJump = new DecaHighJump();
+	DecaDiscusThrow decadiscusThrow = new DecaDiscusThrow();
 	DecaShotPut decaShotPut = new DecaShotPut();
 	DecaJavelinThrow decaJavelinThrow = new DecaJavelinThrow();
-	DecaPoleVault poleVault = new DecaPoleVault();
+	DecaPoleVault decapoleVault = new DecaPoleVault();
 
 	Hep200M hep200M = new Hep200M();
 	Hep800M hep800M = new Hep800M();
@@ -85,13 +85,13 @@ public class SelectDiscipline {
 			decaLongJump.calculateResult(inputResult.enterResult());
 			break;
 		case 6:
-			highJump.calculateResult(inputResult.enterResult());
+			decahighJump.calculateResult(inputResult.enterResult());
 			break;
 		case 7:
-			poleVault.calculateResult(inputResult.enterResult());
+			decapoleVault.calculateResult(inputResult.enterResult());
 			break;
 		case 8:
-			discusThrow.calculateResult(inputResult.enterResult());
+			decadiscusThrow.calculateResult(inputResult.enterResult());
 			break;
 		case 9:
 			decaJavelinThrow.calculateResult(inputResult.enterResult());
