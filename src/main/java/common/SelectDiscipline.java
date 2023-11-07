@@ -16,7 +16,7 @@ import decathlon.DecaPoleVault;
 import heptathlon.Hep100MHurdles;
 import heptathlon.Hep200M;
 import heptathlon.Hep800M;
-import heptathlon.HeptHightJump;
+import heptathlon.HeptHighJump;
 import heptathlon.HeptJavelinThrow;
 import heptathlon.HeptLongJump;
 import heptathlon.HeptShotPut;
@@ -40,7 +40,7 @@ public class SelectDiscipline {
 	Hep200M hep200M = new Hep200M();
 	Hep800M hep800M = new Hep800M();
 	Hep100MHurdles hep100MHurdles = new Hep100MHurdles();
-	HeptHightJump hepHighJump = new HeptHightJump();
+	HeptHighJump hepHighJump = new HeptHighJump();
 	HeptLongJump hepLongJump = new HeptLongJump();
 	HeptShotPut hepShotPut = new HeptShotPut();
 	HeptJavelinThrow hepJavelinThrow = new HeptJavelinThrow();
