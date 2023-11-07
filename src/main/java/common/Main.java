@@ -7,11 +7,10 @@ public class Main {
 		boolean running = true;
 
 		while (running){
+
 			Menu menu = new Menu();
 			menu.inputSelection();
 			running = menu.running;
 		}
-
-
 	}
 }

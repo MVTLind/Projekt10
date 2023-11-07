@@ -1,7 +1,6 @@
 package common;
 
 import java.util.Scanner;
-
 import decathlon.Deca100M;
 import decathlon.Deca1500M;
 import decathlon.Deca110MHurdles;
@@ -23,6 +22,7 @@ import heptathlon.HeptShotPut;
 
 public class SelectDiscipline {
 
+	public int deca100MScore;
 	int disciplineSelected;
 	InputResult inputResult = new InputResult();
 	Scanner sc = new Scanner(System.in);
@@ -68,10 +68,20 @@ public class SelectDiscipline {
 	public void makeSelection(InputName name) {
 
 		Integer partialScore = 0;
+		Scanner scan = new Scanner(System.in);
+		CompetitorDataBase DB = new CompetitorDataBase();
 
 		switch (disciplineSelected) {
 		case 1:
+			Competitor currentUser = DB.getUser(0);
+			//currentUser = DB.getUser(index);
+			System.out.println(currentUser.getDeca100M());
+
 			deca100M.calculateResult(inputResult.enterResult());
+			int result = deca100M.returnResult();
+
+			currentUser.setDeca100M(result);
+			System.out.println(currentUser.getDeca100M());
 			break;
 		case 2:
 			deca400M.calculateResult(inputResult.enterResult());

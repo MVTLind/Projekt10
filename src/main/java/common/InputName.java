@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class InputName {
 	String compName = "";
-	Integer score = 0;
+	int score = 0;
 
 
 	//Add competitor

@@ -1,5 +1,6 @@
 package common;
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 import static java.lang.System.exit;
@@ -11,8 +12,12 @@ public class Menu {
     boolean running = true;
     Scanner sc = new Scanner(System.in);
     SelectDiscipline selectDiscipline = new SelectDiscipline();
+    CompetitorDataBase DB = new CompetitorDataBase();
 
     public void inputSelection() {
+        Scanner scan = new Scanner(System.in);
+        Competitor currentUser = DB.getUser(0);
+
         System.out.println("Welcome to the main menu.\nPlease select an option from the menu:");
         printOptions();
 
@@ -35,9 +40,18 @@ public class Menu {
             case 1:
                 InputName inputName = new InputName();
                 inputName.addCompetitor();
+                //competitorName = inputName.addCompetitor();
+                //System.out.println(competitorName);
+
+                //Competitor name = new Competitor(competitorName);
+                //Competitor Johan = new Competitor("Johan");
 
                 SelectDiscipline selectDiscipline = new SelectDiscipline();
                 selectDiscipline.inputSelection(inputName);
+                //setScore();
+
+                //Competitor score = new Competitor(competitorName);
+
                 break;
             case 2:
                 break;
@@ -46,6 +60,12 @@ public class Menu {
             case 4:
                 break;
             case 5:
+//                try {
+//                    name.printInfo();
+//                } catch (Exception e) {
+//                    System.out.println("There is no competitor , try again.\n");
+//                    printOptions();
+//                }
                 break;
             case 0:
                 System.out.println("Exiting...");
