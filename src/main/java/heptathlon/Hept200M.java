@@ -1,14 +1,13 @@
 package heptathlon;
 
-import common.CalcTrackAndField;
-import common.InputResult;
+import common.*;
 
-public class Hep100MHurdles {
+public class Hept200M {
 
 	private int score;
-	private double A = 9.23076;
-	private double B = 26.7;
-	private double C = 1.835;
+	private double A = 4.99087;
+	private double B = 42.5;
+	private double C = 1.81;
 	boolean active = true;
 	CalcTrackAndField calc = new CalcTrackAndField();
 	InputResult inputResult = new InputResult();
@@ -20,20 +19,18 @@ public class Hep100MHurdles {
 
 			try {
 				// Acceptable values.
-				if (runningTime < 5) {
+				if (runningTime < 14) {
 					System.out.println("Value too low");
 					runningTime = inputResult.enterResult();
-				} else if (runningTime > 26.4) {
+				} else if (runningTime > 42.08) {
+					// get 1 point in 42.08sec
 					System.out.println("Value too high");
 					runningTime = inputResult.enterResult();
-					//runningTime = inputResult.enterResult();
 				} else {
-
 					score = calc.calculateTrack(A, B, C, runningTime);
 					active = false;
 				}
 			} catch (Exception e) {
-
 				System.out.println("Please enter numbers");
 			}
 		}

@@ -13,9 +13,9 @@ import decathlon.DecaLongJump;
 import decathlon.DecaShotPut;
 import decathlon.DecaPoleVault;
 
-import heptathlon.Hep100MHurdles;
-import heptathlon.Hep200M;
-import heptathlon.Hep800M;
+import heptathlon.Hept100MHurdles;
+import heptathlon.Hept200M;
+import heptathlon.Hept800M;
 import heptathlon.HeptHighJump;
 import heptathlon.HeptJavelinThrow;
 import heptathlon.HeptLongJump;
@@ -37,9 +37,9 @@ public class SelectDiscipline {
 	DecaJavelinThrow decaJavelinThrow = new DecaJavelinThrow();
 	DecaPoleVault decapoleVault = new DecaPoleVault();
 
-	Hep200M hep200M = new Hep200M();
-	Hep800M hep800M = new Hep800M();
-	Hep100MHurdles hep100MHurdles = new Hep100MHurdles();
+	Hept200M hept200M = new Hept200M();
+	Hept800M hept800M = new Hept800M();
+	Hept100MHurdles hept100MHurdles = new Hept100MHurdles();
 	HeptHighJump hepHighJump = new HeptHighJump();
 	HeptLongJump hepLongJump = new HeptLongJump();
 	HeptShotPut hepShotPut = new HeptShotPut();
@@ -100,13 +100,13 @@ public class SelectDiscipline {
 			decaShotPut.calculateResult(inputResult.enterResult());
 			break;
 		case 11:
-			hep200M.calculateResult(inputResult.enterResult());
+			hept200M.calculateResult(inputResult.enterResult());
 			break;
 		case 12:
-			hep800M.calculateResult(inputResult.enterResult());
+			hept800M.calculateResult(inputResult.enterResult());
 			break;
 		case 13:
-			hep100MHurdles.calculateResult(inputResult.enterResult());
+			hept100MHurdles.calculateResult(inputResult.enterResult());
 			break;
 		case 14:
 			hepHighJump.calculateResult(inputResult.enterResult());

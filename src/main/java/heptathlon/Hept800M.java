@@ -2,12 +2,12 @@ package heptathlon;
 
 import common.*;
 
-public class Hep200M {
+public class Hept800M {
 
 	private int score;
-	private double A = 4.99087;
-	private double B = 42.5;
-	private double C = 1.81;
+	private double A = 0.11193;
+	private double B = 254;
+	private double C = 1.88;
 	boolean active = true;
 	CalcTrackAndField calc = new CalcTrackAndField();
 	InputResult inputResult = new InputResult();
@@ -19,11 +19,11 @@ public class Hep200M {
 
 			try {
 				// Acceptable values.
-				if (runningTime < 14) {
+				if (runningTime < 70) {
 					System.out.println("Value too low");
 					runningTime = inputResult.enterResult();
-				} else if (runningTime > 42.08) {
-					// get 1 point in 42.08sec
+				} else if (runningTime > 250.79) {
+					// competitor gets 1 point in 250.79 sec
 					System.out.println("Value too high");
 					runningTime = inputResult.enterResult();
 				} else {
@@ -31,6 +31,7 @@ public class Hep200M {
 					active = false;
 				}
 			} catch (Exception e) {
+
 				System.out.println("Please enter numbers");
 			}
 		}
