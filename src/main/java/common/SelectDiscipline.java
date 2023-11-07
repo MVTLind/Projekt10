@@ -57,7 +57,9 @@ public class SelectDiscipline {
 			makeSelection();
 
 		} catch (Exception e) {
-			System.out.println("Invalid input, try again.");
+			//The Exceptions are called if the input contains anything that is not an int
+			System.out.println("Invalid input, only use numbers, try again.");
+			//System.out.println("Invalid input, try again.");
 			System.out.println("");
 			inputSelection();
 		}
@@ -119,7 +121,9 @@ public class SelectDiscipline {
 			hepJavelinThrow.calculateResult(inputResult.enterResult());
 			break;
 		default:
-			System.out.println("Invalid input, try again.");
+			//This Exception is thrown when a number that is not in cases is being input
+			System.out.println("Only use the corresponding number for the Discipline you're choosing");
+			//System.out.println("Invalid input, try again.");
 			System.out.println("");
 			inputSelection();
 			break;
