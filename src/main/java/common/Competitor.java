@@ -1,32 +1,11 @@
 package common;
-import java.util.Arrays;
-import java.util.Dictionary;
-import java.util.Hashtable;
-import decathlon.Deca100M;
-import decathlon.Deca1500M;
-import decathlon.Deca110MHurdles;
-import decathlon.Deca400M;
-import decathlon.DecaDiscusThrow;
-import decathlon.DecaHighJump;
-import decathlon.DecaJavelinThrow;
-import decathlon.DecaLongJump;
-import decathlon.DecaShotPut;
-import decathlon.DecaPoleVault;
-
-import heptathlon.Hep100MHurdles;
-import heptathlon.Hep200M;
-import heptathlon.Hep800M;
-import heptathlon.HeptHightJump;
-import heptathlon.HeptJavelinThrow;
-import heptathlon.HeptLongJump;
-import heptathlon.HeptShotPut;
 
 public class Competitor {
 
     private String name;
     private int score = 0;
     private int deca100M = 0;
-    private int deca110mHurdles = 0;
+    private int deca110MHurdles = 0;
     private int deca400M = 0;
     private int deca1500M = 0;
     private int decaDiscusThrow = 0;
@@ -72,12 +51,12 @@ public class Competitor {
         this.deca100M = deca100M;
     }
 
-    public int getDeca110mHurdles() {
-        return deca110mHurdles;
+    public int getDeca110MHurdles() {
+        return deca110MHurdles;
     }
 
-    public void setDeca110mHurdles(int deca110mHurdles) {
-        this.deca110mHurdles = deca110mHurdles;
+    public void setDeca110MHurdles(int deca110MHurdles) {
+        this.deca110MHurdles = deca110MHurdles;
     }
 
     public int getDeca400M() {
@@ -202,8 +181,25 @@ public class Competitor {
 
     public void printAllScores(){
         System.out.println("Competitor name: " + getName());
-        System.out.println("Deca100M: " + getDeca100M());
-        System.out.println("Deca110MHurdles: " + getDeca110mHurdles());
+        System.out.println("Decathlon 100M: " + getDeca100M());
+        System.out.println("Decathlon 110M Hurdles: " + getDeca110MHurdles());
+        System.out.println("Decathlon 400M: " + getDeca400M());
+        System.out.println("Decathlon 1500M: " + getDeca1500M());
+        System.out.println("Decathlon Discus Throw: " + getDecaDiscusThrow());
+        System.out.println("Decathlon High Jump: " + getDecaHighJump());
+        System.out.println("Decathlon Javelin Throw: " + getDecaJavelinThrow());
+        System.out.println("Decathlon Long Jump: " + getDecaLongJump());
+        System.out.println("Decathlon Pole Vault: " + getDecaPoleVault());
+        System.out.println("Decathlon Shot Put: " + getDecaShotPut());
+        System.out.println("Hepathlon 100M Hurdles: " + getHept100MHurdles());
+        System.out.println("Hepathlon 200M: " + getHept200M());
+        System.out.println("Hepathlon 800M: " + getHept800M());
+        System.out.println("Hepathlon High Jump: " + getHeptHighJump());
+        System.out.println("Hepathlon Javelin Throw: " + getHeptJavelinThrow());
+        System.out.println("Hepathlon Long Jump: " + getHeptLongJump());
+        System.out.println("Hepathlon Shot Put: " + getHeptShotPut());
+
+
     }
 
 }

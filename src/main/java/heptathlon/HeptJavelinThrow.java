@@ -42,4 +42,8 @@ public class HeptJavelinThrow {
 		return score;
 	}
 
+	public int returnResult() {
+		return score;
+	}
+
 }

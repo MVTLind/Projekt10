@@ -40,4 +40,8 @@ public class DecaDiscusThrow {
 
 	}
 
+	public int returnResult() {
+		return score;
+	}
+
 }

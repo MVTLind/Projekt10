@@ -41,4 +41,8 @@ public class HeptLongJump {
 		System.out.println("The result is: " + score);
 	}
 
+	public int returnResult() {
+		return score;
+	}
+
 }

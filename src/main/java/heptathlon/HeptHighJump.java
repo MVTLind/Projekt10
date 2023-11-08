@@ -3,7 +3,7 @@ package heptathlon;
 import common.CalcTrackAndField;
 import common.InputResult;
 
-public class HeptHightJump {
+public class HeptHighJump {
 
 	private int score;
 	private double A = 1.84523;
@@ -39,6 +39,10 @@ public class HeptHightJump {
 			}
 		}
 		System.out.println("The result is: " + score);
+	}
+
+	public int returnResult() {
+		return score;
 	}
 
 }

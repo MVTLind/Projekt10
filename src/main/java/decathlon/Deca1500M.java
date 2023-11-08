@@ -40,4 +40,7 @@ public class Deca1500M {
 
 	}
 
+    public int returnResult() {
+		return score;
+    }
 }

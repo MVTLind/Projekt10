@@ -40,4 +40,7 @@ public class DecaLongJump {
 		System.out.println("The result is: " + score);
 	}
 
+    public int returnResult() {
+		return score;
+    }
 }

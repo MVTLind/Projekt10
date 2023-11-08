@@ -12,10 +12,10 @@ import decathlon.DecaLongJump;
 import decathlon.DecaShotPut;
 import decathlon.DecaPoleVault;
 
-import heptathlon.Hep100MHurdles;
-import heptathlon.Hep200M;
-import heptathlon.Hep800M;
-import heptathlon.HeptHightJump;
+import heptathlon.Hept100MHurdles;
+import heptathlon.Hept200M;
+import heptathlon.Hept800M;
+import heptathlon.HeptHighJump;
 import heptathlon.HeptJavelinThrow;
 import heptathlon.HeptLongJump;
 import heptathlon.HeptShotPut;
@@ -38,13 +38,13 @@ public class SelectDiscipline {
 	DecaJavelinThrow decaJavelinThrow = new DecaJavelinThrow();
 	DecaPoleVault decaPoleVault = new DecaPoleVault();
   
-	Hep200M hep200M = new Hep200M();
-	Hep800M hep800M = new Hep800M();
-	Hep100MHurdles hep100MHurdles = new Hep100MHurdles();
-	HeptHightJump hepHighJump = new HeptHightJump();
-	HeptLongJump hepLongJump = new HeptLongJump();
-	HeptShotPut hepShotPut = new HeptShotPut();
-	HeptJavelinThrow hepJavelinThrow = new HeptJavelinThrow();
+	Hept200M hept200M = new Hept200M();
+	Hept800M hept800M = new Hept800M();
+	Hept100MHurdles hept100MHurdles = new Hept100MHurdles();
+	HeptHighJump heptHighJump = new HeptHighJump();
+	HeptLongJump heptLongJump = new HeptLongJump();
+	HeptShotPut heptShotPut = new HeptShotPut();
+	HeptJavelinThrow heptJavelinThrow = new HeptJavelinThrow();
 
 	//Receive input	of selection of discipline.
 
@@ -72,61 +72,89 @@ public class SelectDiscipline {
 
 		switch (disciplineSelected) {
 		case 1:
-			//Competitor currentUser = DB.getUser(0);
 			deca100M.calculateResult(inputResult.enterResult());
 			result = deca100M.returnResult();
-			DB.getUser(0).printAllScores();
 			DB.getUser(0).setDeca100M(result);
-			DB.getUser(0).printAllScores();
 			break;
 		case 2:
 			deca400M.calculateResult(inputResult.enterResult());
+			result = deca400M.returnResult();
+			DB.getUser(0).setDeca400M(result);
 			break;
 		case 3:
 			deca110MHurdles.calculateResult(inputResult.enterResult());
+			result = deca110MHurdles.returnResult();
+			DB.getUser(0).setDeca110MHurdles(result);
 			break;
 		case 4:
 			deca1500M.calculateResult(inputResult.enterResult());
+			result = deca1500M.returnResult();
+			DB.getUser(0).setDeca1500M(result);
 			break;
 		case 5:
 			decaLongJump.calculateResult(inputResult.enterResult());
+			result = decaLongJump.returnResult();
+			DB.getUser(0).setDecaLongJump(result);
 			break;
 		case 6:
 			decaHighJump.calculateResult(inputResult.enterResult());
+			result = decaHighJump.returnResult();
+			DB.getUser(0).setDecaHighJump(result);
 			break;
 		case 7:
 			decaPoleVault.calculateResult(inputResult.enterResult());
+			result = decaPoleVault.returnResult();
+			DB.getUser(0).setDecaPoleVault(result);
 			break;
 		case 8:
 			decaDiscusThrow.calculateResult(inputResult.enterResult());
+			result = decaDiscusThrow.returnResult();
+			DB.getUser(0).setDecaDiscusThrow(result);
 			break;
 		case 9:
 			decaJavelinThrow.calculateResult(inputResult.enterResult());
+			result = decaJavelinThrow.returnResult();
+			DB.getUser(0).setDecaJavelinThrow(result);
 			break;
 		case 10:
 			decaShotPut.calculateResult(inputResult.enterResult());
+			result = decaShotPut.returnResult();
+			DB.getUser(0).setDecaShotPut(result);
 			break;
 		case 11:
-			hep200M.calculateResult(inputResult.enterResult());
+			hept200M.calculateResult(inputResult.enterResult());
+			result = hept200M.returnResult();
+			DB.getUser(0).setHept200M(result);
 			break;
 		case 12:
-			hep800M.calculateResult(inputResult.enterResult());
+			hept800M.calculateResult(inputResult.enterResult());
+			result = hept800M.returnResult();
+			DB.getUser(0).setHept800M(result);
 			break;
 		case 13:
-			hep100MHurdles.calculateResult(inputResult.enterResult());
+			hept100MHurdles.calculateResult(inputResult.enterResult());
+			result = hept100MHurdles.returnResult();
+			DB.getUser(0).setHept100MHurdles(result);
 			break;
 		case 14:
-			hepHighJump.calculateResult(inputResult.enterResult());
+			heptHighJump.calculateResult(inputResult.enterResult());
+			result = heptHighJump.returnResult();
+			DB.getUser(0).setHeptHighJump(result);
 			break;
 		case 15:
-			hepLongJump.calculateResult(inputResult.enterResult());
+			heptLongJump.calculateResult(inputResult.enterResult());
+			result = heptLongJump.returnResult();
+			DB.getUser(0).setHeptLongJump(result);
 			break;
 		case 16:
-			hepShotPut.calculateResult(inputResult.enterResult());
+			heptShotPut.calculateResult(inputResult.enterResult());
+			result = heptShotPut.returnResult();
+			DB.getUser(0).setHeptShotPut(result);
 			break;
 		case 17:
-			//partialScore = hepJavelinThrow.calculateResult(inputResult.enterResult());
-			//name.score = partialScore + name.score;
+			heptJavelinThrow.calculateResult(inputResult.enterResult());
+			result = heptJavelinThrow.returnResult();
+			DB.getUser(0).setHeptJavelinThrow(result);
 			break;
 		case 18:
 			System.out.println(name.score);

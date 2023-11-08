@@ -41,4 +41,8 @@ public class DecaJavelinThrow {
 		return score;
 	}
 
+	public int returnResult() {
+		return score;
+	}
+
 }

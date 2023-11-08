@@ -12,11 +12,10 @@ public class Menu {
     boolean running = true;
     Scanner sc = new Scanner(System.in);
     SelectDiscipline selectDiscipline = new SelectDiscipline();
-    CompetitorDataBase DB = new CompetitorDataBase();
+
 
     public void inputSelection() {
         Scanner scan = new Scanner(System.in);
-        Competitor currentUser = DB.getUser(0);
 
         System.out.println("Welcome to the main menu.\nPlease select an option from the menu:");
         printOptions();
@@ -56,7 +55,7 @@ public class Menu {
                 selectDiscipline.printAvailableUsers();
                 System.out.print("Please select competitor with Id number:\n");
                 int index = Integer.parseInt(sc.nextLine());
-                selectDiscipline.currentUser.printAllScores();
+                selectDiscipline.getUser(0).printAllScores();
 
                 break;
             case 0:

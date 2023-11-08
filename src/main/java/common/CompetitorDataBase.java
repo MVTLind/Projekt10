@@ -25,4 +25,5 @@ public class CompetitorDataBase {
             System.out.println("Id:" + key + ", Name:" + users.get(key).getName());
         }
     }
+
 }

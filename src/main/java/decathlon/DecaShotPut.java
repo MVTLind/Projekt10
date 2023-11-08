@@ -41,4 +41,8 @@ public class DecaShotPut {
 
 	}
 
+	public int returnResult() {
+		return score;
+	}
+
 }
