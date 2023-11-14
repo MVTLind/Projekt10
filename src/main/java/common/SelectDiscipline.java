@@ -67,8 +67,6 @@ public class SelectDiscipline {
 	// Check input of discipline.
 	public void makeSelection(int index) {
 
-		Scanner scan = new Scanner(System.in);
-
 		switch (disciplineSelected) {
 		case 1:
 			deca100M.calculateResult(inputResult.enterResult());
@@ -191,10 +189,5 @@ public class SelectDiscipline {
 
 	public Competitor getUser(int index){
 		return DB.getUser(index);
-	}
-
-	public void printAllScores(int index){
-		//DB.getUser(0).printAllScores();
-		DB.getUser(0).printAllScores();
 	}
 }
