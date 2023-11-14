@@ -12,12 +12,12 @@ public class Menu {
     boolean running = true;
     Scanner sc = new Scanner(System.in);
     SelectDiscipline selectDiscipline = new SelectDiscipline();
-
+    int index;
 
     public void inputSelection() {
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Welcome to the main menu.\nPlease select an option from the menu:");
+        System.out.println("\nWelcome to the main menu.\nPlease select an option from the menu:");
         printOptions();
 
         try {
@@ -37,26 +37,30 @@ public class Menu {
 
         switch (optionSelected) {
             case 1:
-                InputName inputName = new InputName();
-                inputName.addCompetitor();
-                selectDiscipline.inputSelection(inputName);
+                System.out.print("Which competitor do you want to enter score:\n");
+                selectDiscipline.printAvailableUsers();
+                index = Integer.parseInt(sc.nextLine());
+                selectDiscipline.inputSelection(index);
                 break;
             case 2:
+                selectDiscipline.DB.createNewUser();
                 break;
             case 3:
+                selectDiscipline.DB.deleteNewUser();
                 break;
             case 4:
                 break;
             case 5:
+                break;
+            case 6:
 //                Print all existing competitors
 //                Ask user: which competitor do you want to see all scores in
 //                Print all scores for CHOSEN competitor with all branches
                 System.out.print("Here is all competitors:\n");
                 selectDiscipline.printAvailableUsers();
-                System.out.print("Please select competitor with Id number:\n");
-                int index = Integer.parseInt(sc.nextLine());
-                selectDiscipline.getUser(0).printAllScores();
-
+                System.out.print("Please select competitor with ID number:\n");
+                index = Integer.parseInt(sc.nextLine());
+                selectDiscipline.getUser(index).printAllScores();
                 break;
             case 0:
                 System.out.println("Exiting...");
@@ -73,10 +77,11 @@ public class Menu {
     // Needs more stuff.
     public void printOptions() {
         System.out.println("1. Decathlon and Hepathlon calculator");
-        System.out.println("2. Delete a current competitor");
-        System.out.println("3. Export to an excel-file");
-        System.out.println("4. Import from an excel-file");
-        System.out.println("5. Display current scores");
+        System.out.println("2. Create a new competitor");
+        System.out.println("3. Delete a current competitor");
+        System.out.println("4. Export to an excel-file (Non-functional)");
+        System.out.println("5. Import from an excel-file");
+        System.out.println("6. Display current scores");
         System.out.println("0. Exit");
     }
 
