@@ -113,7 +113,7 @@ public class MyStepdefs {
                 break;
             }
 
-            case "Hep100MHurdles": {
+            case "Hept100MHurdles": {
                 TrackOrField = "Track";
                 A = 9.23076;
                 B = 26.7;
@@ -121,7 +121,7 @@ public class MyStepdefs {
                 break;
             }
 
-            case "Hep200M": {
+            case "Hept200M": {
                 TrackOrField = "Track";
                 A = 4.99087;
                 B = 42.5;
@@ -129,7 +129,7 @@ public class MyStepdefs {
                 break;
             }
 
-            case "Hep800M": {
+            case "Hept800M": {
                 TrackOrField = "Track";
                 A = 0.11193;
                 B = 254;
