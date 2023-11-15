@@ -1,11 +1,8 @@
 package common;
 
-import java.util.HashMap;
 import java.util.Scanner;
 
 import excel.ExcelReader;
-
-import static java.lang.System.exit;
 
 import java.io.IOException;
 
@@ -19,13 +16,10 @@ public class Menu {
     int index;
 
     public void inputSelection() {
-        Scanner scan = new Scanner(System.in);
-
         System.out.println("\nWelcome to the main menu.\nPlease select an option from the menu:");
         printOptions();
 
         try {
-
             optionSelected = Integer.parseInt(sc.nextLine());
             makeSelection(optionSelected);
 
@@ -56,7 +50,6 @@ public class Menu {
                 break;
             case 5:
                 ExcelReader excelReader = new ExcelReader();
-                Scanner sc = new Scanner(System.in);
                 String fileName = "";
                 String competitorName = "";
                 boolean active = true;
@@ -64,7 +57,6 @@ public class Menu {
                 while (active) {
                     System.out.println("Please enter the name of the file:");
                     try {
-
                         fileName = sc.nextLine();
                         active = false;
                     } catch (Exception e) {
@@ -113,7 +105,7 @@ public class Menu {
 
     // Needs more stuff.
     public void printOptions() {
-        System.out.println("1. Decathlon and Hepathlon calculator");
+        System.out.println("1. Decathlon and Heptathlon calculator");
         System.out.println("2. Create a new competitor");
         System.out.println("3. Delete a current competitor");
         System.out.println("4. Export to an excel-file (Non-functional)");

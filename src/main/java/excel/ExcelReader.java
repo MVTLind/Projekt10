@@ -13,7 +13,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelReader {
 
-	public String getCellInfo(Sheet sheet, int rowNumber, int colNumber) throws IOException {
+	public String getCellInfo(Sheet sheet, int rowNumber, int colNumber) {
 
 		Row row = sheet.getRow(rowNumber);
         Cell cell = row.getCell(colNumber);
@@ -27,7 +27,7 @@ public class ExcelReader {
 
 	public void getExcelInfo(String excelName, String sheetName) throws IOException {
 
-		File excelfile = new File("E:\\result\\" + excelName + ".xlsx");
+		File excelfile = new File("C:\\result\\" + excelName + ".xlsx");
 
 		FileInputStream fis = new FileInputStream(excelfile);
 		@SuppressWarnings("resource")
