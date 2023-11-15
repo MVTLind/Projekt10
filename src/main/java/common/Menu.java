@@ -2,7 +2,11 @@ package common;
 
 import java.util.Scanner;
 
+import excel.ExcelReader;
+
 import static java.lang.System.exit;
+
+import java.io.IOException;
 
 public class Menu {
     //Receive input	of selection of discipline.
@@ -29,7 +33,7 @@ public class Menu {
     }
 
     // Check input of discipline.
-    public void makeSelection(int optionSelected) {
+    public void makeSelection(int optionSelected) throws IOException {
 
         switch (optionSelected) {
             case 1:
@@ -44,6 +48,39 @@ public class Menu {
             case 3:
                 break;
             case 4:
+                ExcelReader excelReader = new ExcelReader();
+                Scanner sc = new Scanner(System.in);
+                String fileName = "";
+                String competitorName = "";
+		        boolean active = true;
+                boolean active2 = true;
+		        while (active) {
+			        System.out.println("Please enter the name of the file:");
+			        try {
+
+				        fileName = sc.nextLine();
+				        active = false;
+			        } catch (Exception e) {
+				        System.out.println("Invalid input, try again."); //Vague error message
+			        }
+
+                }
+                while (active2){
+                    System.out.println("Please enter the name of the competitor:");
+			        System.out.println("");
+                    try {
+
+				        competitorName = sc.nextLine();
+				        active2 = false;
+			        } catch (Exception e) {
+				        System.out.println("Invalid input, try again."); //Vague error message
+
+                    }
+                }
+
+
+                excelReader.getExcelInfo(fileName, competitorName);
+
                 break;
             case 5:
                 break;
