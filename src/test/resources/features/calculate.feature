@@ -17,3 +17,4 @@ Feature: Decathlon
       | DecaPoleVault      | 300    | 357    |
       | DecaShotPut        | 15     | 790    |
 
+    //Test
