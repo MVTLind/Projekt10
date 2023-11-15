@@ -4,6 +4,7 @@ public class Competitor {
 
     private String name;
     private int score = 0;
+    private int totalScore = 0;
     private int deca100M = 0;
     private int deca110MHurdles = 0;
     private int deca400M = 0;
@@ -41,6 +42,27 @@ public class Competitor {
 
     public void setScore(int score) {
         this.score = score;
+    }
+
+    public int getTotalScore() {
+        totalScore += deca100M;
+        totalScore += deca110MHurdles;
+        totalScore += deca400M;
+        totalScore += deca1500M;
+        totalScore += decaDiscusThrow;
+        totalScore += decaHighJump;
+        totalScore += decaJavelinThrow;
+        totalScore += decaLongJump;
+        totalScore += decaPoleVault;
+        totalScore += decaShotPut;
+        totalScore += hept100MHurdles;
+        totalScore += hept200M;
+        totalScore += hept800M;
+        totalScore += heptHighJump;
+        totalScore += heptJavelinThrow;
+        totalScore += heptLongJump;
+        totalScore += heptShotPut;
+        return totalScore;
     }
 
     public int getDeca100M() {
@@ -198,6 +220,7 @@ public class Competitor {
         System.out.println("Hepathlon Javelin Throw: " + getHeptJavelinThrow());
         System.out.println("Hepathlon Long Jump: " + getHeptLongJump());
         System.out.println("Hepathlon Shot Put: " + getHeptShotPut());
+        System.out.println("Total score: " + getTotalScore());
 
 
     }
