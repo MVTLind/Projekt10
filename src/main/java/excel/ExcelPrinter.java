@@ -33,23 +33,23 @@ public class ExcelPrinter {
 			for (Object field : aBook) {
 				Cell cell = row.createCell(columnCount);
 				columnCount++;
-				
+
 				if (field instanceof String) {
 					cell.setCellValue((String) field);
-					
+
 				} else if (field instanceof Integer) {
 					cell.setCellValue((Integer) field);
-					
+
 				} else if (field instanceof Double) {
 					cell.setCellValue((Double) field);
-					
+
 				}
 			}
 		}
 	}
 
 	public void write() throws IOException {
-		FileOutputStream out = new FileOutputStream("C:/Eclipse/resultat_" + excelName + ".xlsx");
+		FileOutputStream out = new FileOutputStream("..\result" + excelName + ".xlsx");
 		workbook.write(out);
 		workbook.close();
 	}
