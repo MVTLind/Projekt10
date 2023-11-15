@@ -3,7 +3,6 @@ package common;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import static java.lang.System.exit;
 
 public class Menu {
     //Receive input	of selection of discipline.
